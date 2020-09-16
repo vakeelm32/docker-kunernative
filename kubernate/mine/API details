@@ -1,0 +1,20 @@
+POST - http://192.168.99.100:30010/addProducts - 
+
+[
+    {
+        "id": 13,
+        "name": "test1",
+        "description": "test1 desc",
+        "price": 120,
+        "color": "black"
+    },
+    {
+        "id": 14,
+        "name": "test2",
+        "description": "test1 desc",
+        "price": 210,
+        "color": "white"
+    }
+]
+
+GET - http://192.168.99.100:8080/products
