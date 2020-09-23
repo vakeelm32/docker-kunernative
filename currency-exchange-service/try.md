@@ -1,0 +1,1 @@
+docker run -p 8000:8000 --network=my-network --name=currency-exchange-service -d techvakeelm32/currency-exchange-service:v1

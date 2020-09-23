@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../currency-exchange-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../netflix-eureka-naming-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" project-jdk-name="14" project-jdk-type="JavaSDK" />
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../../../Play/workspace/play-java-seed/play-java-seed" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+</project>

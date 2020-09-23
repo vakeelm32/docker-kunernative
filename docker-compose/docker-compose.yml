@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+
+  zuul-api-gateway:
+    image: in28min/netflix-zuul-api-gateway-server:0.0.1-SNAPSHOT
+    ports:
+      - "8765:8765"
+    depends_on:
+      - naming-server
+    networks:
+      - currency-compose-network
+  currency-exchange-service:
+    image: in28min/currency-exchange-service:0.0.1-SNAPSHOT
+    #ports:
+      #- "8000:8000"
+    networks:
+      - currency-compose-network
+
+  naming-server:
+    image: in28min/netflix-eureka-naming-server:0.0.1-SNAPSHOT
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - currency-compose-network
+  
+  currency-conversion-service:
+    image: in28min/currency-conversion-service:0.0.1-SNAPSHOT
+    ports:
+      - "8100:8100"
+    # environment:
+      # CURRENCY_EXCHANGE_URI: http://currency-exchange-service:8000
+    depends_on:
+      - currency-exchange-service
+      - naming-server  
+    networks:
+      - currency-compose-network
+
+networks:
+  currency-compose-network:

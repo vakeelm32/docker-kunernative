@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b96b7d20-a8be-4361-a4a6-e6e289a7b98e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../currency-exchange-service/try.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/microservices/currencyconversionservice/CurrencyConversionServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/currencyconversionservice/CurrencyConversionServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/microservices/currencyconversionservice/resource/CurrencyConversionBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/currencyconversionservice/resource/CurrencyConversionBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/microservices/currencyconversionservice/resource/CurrencyConversionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/currencyconversionservice/resource/CurrencyConversionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/microservices/currencyconversionservice/resource/CurrencyExchangeServiceProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/currencyconversionservice/resource/CurrencyExchangeServiceProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/microservices/currencyconversionservice/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/currencyconversionservice/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/microservices/currencyconversionservice/util/environment/EnvironmentConfigurationLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/currencyconversionservice/util/environment/EnvironmentConfigurationLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/microservices/currencyconversionservice/CurrencyConversionServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/in28minutes/microservices/currencyexchangeservice/CurrencyExchangeServiceApplicationH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/practice/currencyexchangeservice/CurrencyExchangeServiceApplicationH2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/in28minutes/microservices/currencyexchangeservice/resource/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/practice/currencyexchangeservice/resource/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/in28minutes/microservices/currencyexchangeservice/resource/ExchangeValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/practice/currencyexchangeservice/resource/ExchangeValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/in28minutes/microservices/currencyexchangeservice/resource/ExchangeValueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/practice/currencyexchangeservice/resource/ExchangeValueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/in28minutes/microservices/currencyexchangeservice/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/practice/currencyexchangeservice/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/in28minutes/microservices/currencyexchangeservice/util/environment/EnvironmentConfigurationLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/practice/currencyexchangeservice/util/environment/EnvironmentConfigurationLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/test/java/com/in28minutes/microservices/currencyexchangeservice/CurrencyExchangeServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-eureka-naming-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-eureka-naming-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-eureka-naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-eureka-naming-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-eureka-naming-server/src/main/java/com/in28minutes/microservices/netflixeurekanamingserver/NetflixEurekaNamingServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-eureka-naming-server/src/main/java/com/practice/netflixeurekanamingserver/NetflixEurekaNamingServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-eureka-naming-server/src/test/java/com/in28minutes/microservices/netflixeurekanamingserver/NetflixEurekaNamingServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/src/main/java/com/in28minutes/microservices/netflixzuulapigatewayserver/NetflixZuulApiGatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/src/main/java/com/practice/netflixzuulapigatewayserver/NetflixZuulApiGatewayServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/src/main/java/com/in28minutes/microservices/netflixzuulapigatewayserver/ZuulLoggingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/src/main/java/com/practice/netflixzuulapigatewayserver/ZuulLoggingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/src/test/java/com/in28minutes/microservices/netflixzuulapigatewayserver/NetflixZuulApiGatewayServerApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1hrZI4H2fneH0MCLvUyULHn3q8u" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../currency-exchange-service" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="V:\Learning\devops\docker\microservices\docker-crash-course\05-microservices\currency-exchange-service" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b96b7d20-a8be-4361-a4a6-e6e289a7b98e" name="Default Changelist" comment="" />
+      <created>1600771087523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600771087523</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1600771232493">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600771232493" />
+    <state x="165" y="43" key="RollbackChangesDialog" timestamp="1600849608559">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="165" y="43" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600849608559" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1600800116140">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600800116140" />
+    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600849200098">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1600849200098" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600798143266">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600798143266" />
+  </component>
+</project>
