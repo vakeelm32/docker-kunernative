@@ -1,0 +1,45 @@
+package com.vz.controller;
+
+
+import com.vz.model.Product;
+import com.vz.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class ProductController {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping("/products")
+    public List<Product> getAllProduct() {
+        logger.info("******************query for all products ***************************");
+        return productService.getAllProduct();
+    }
+
+    @GetMapping("/products/{id}")
+    public Product getProductById(@PathVariable long id) {
+        logger.info("**************************product id : {} **************************", id);
+        return productService.getProductById(id);
+    }
+
+    @PostMapping("/addProducts")
+    public List<Product> addProducts(@RequestBody List<Product> products) {
+        logger.info("*********************8adding product list {} **********************", products);
+        return productService.addProducts(products);
+    }
+
+
+    @RequestMapping("/clearCache")
+    public String clearCache() {
+        logger.info("clearing Cache ");
+        return "Cleared cache";
+    }
+}
