@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+
+  netflix-zuul-api-gateway-server:
+    image: techvakeelm32/netflix-zuul-api-gateway-server:v1
+    ports:
+      - "8765:8765"
+    depends_on:
+      - naming-server
+    networks:
+      - currency-compose-network
+  currency-exchange-service:
+    image: techvakeelm32/currency-exchange-service:v1
+    ports:
+      - "8000:8000"
+    networks:
+      - currency-compose-network
+
+  naming-server:
+    image: techvakeelm32/netflix-eureka-naming-server:v1
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - currency-compose-network
+  
+  currency-conversion-service:
+    image: techvakeelm32/currency-conversion-service:v1
+    ports:
+      - "8100:8100"
+    depends_on:
+      - currency-exchange-service
+      - naming-server  
+    networks:
+      - currency-compose-network
+
+networks:
+  currency-compose-network:
