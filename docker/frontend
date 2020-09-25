@@ -1,0 +1,43 @@
+
+Dockerfile
+
+# Specify a base image
+FROM node:alpine
+
+WORKDIR /usr/app
+
+# Install some depenendencies
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+
+# Default command
+CMD ["npm", "start"]
+
+-------------------------------------------------------
+package.json
+{
+  "dependencies": {
+    "express": "*"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
+----------------------------
+index.js
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('How are you doing');
+});
+
+app.listen(8080, () => {
+  console.log('Listening on port 8080');
+});
+
+------------------------------------------------------------------------
+
+winpty docker run -it -p 3000:3000 -v /app/node_modules -v "/$(PWD)":/app -e CHOKIDAR_USEPOLLING=true CONTAINER_ID
