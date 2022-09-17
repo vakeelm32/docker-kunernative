@@ -1,0 +1,16 @@
+ templates/NOTES.txt
+ 
+ Thank you for support {{ .Chart.Name }}.
+ 
+ Your release is named {{ .Release.Name }}.
+ 
+ To learn more about the release, try:
+ 
+   $ helm status {{ .Release.Name }}
+   $ helm get all {{ .Release.Name }}
+   $ helm uninstall {{ .Release.Name }}
+ 
+ 
+ ~~~~~~~~~~~~~~~~~
+ 
+helm install notesdemo ./mychart

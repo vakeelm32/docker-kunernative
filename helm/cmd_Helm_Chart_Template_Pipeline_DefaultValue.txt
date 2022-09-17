@@ -1,0 +1,23 @@
+ pipeline
+ ~~~~~~~
+ 
+  pipeline: {{ .Values.projectCode | upper | quote }}
+  now: {{ now | date "2006-01-02" | quote }}
+  
+
+  
+  helm install --dry-run --debug valueseteg ./mychart
+  
+  ~~~~~~~~~~~~~~~~~~~~~~~``
+  default value
+  
+  
+  contact: {{ .Values.contact | default "1-800-123-0000" | quote }}
+  
+ 
+  
+  helm install --dry-run --debug valueseteg ./mychart
+  
+
+   
+  helm install --dry-run --debug --set contact=1-800-800-8888 valueseteg ./mychart

@@ -1,0 +1,44 @@
+ cd mychart/charts
+ 
+ helm create mysubchart
+ 
+ rm -rf mysubchart/templates/*.*
+ 
+ ~~~~~~~~~~~~
+ 
+ mychart/charts/mysubchart/values.yaml
+ 
+ dbhostname: mysqlnode
+ 
+ ~~~~~~~~~~
+ 
+ mychart/charts/mysubchart/templates/configmap.yaml
+ 
+ apiVersion: v1
+ kind: ConfigMap
+ metadata:
+   name: {{ .Release.Name }}-innerconfig
+ data:
+   dbhost: {{ .Values.dbhostname }}
+   
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+ 
+
+ helm install --dry-run --debug mysubchart mychart/charts/mysubchart
+ 
+ ~~~~~~~~~~~~~~~~~~~~~
+ 
+ Over riding values from parent
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ mychart/values.yaml
+ 
+ mysubchart:
+   dbhostname: prodmyqlnode
+ 
+ 
+ 
+ 
+ 
+ helm install --dry-run --debug subchartoverride mychart
+ 
