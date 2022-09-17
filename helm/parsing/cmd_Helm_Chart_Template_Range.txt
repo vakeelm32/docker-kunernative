@@ -1,0 +1,30 @@
+ Looping with Range
+  ~~~~~~~~~~~~~~~~~
+  
+  LangUsed:
+    - Python
+    - Ruby
+    - Java
+    - Scala
+    
+  LangUsed: |-
+     {{- range .Values.LangUsed }}
+     - {{ . | title | quote }}
+     {{- end }}   
+     
+ title - Title case functions
+ 
+ 
+ helm install --dry-run --debug controlif ./mychart
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+   NetSpeed: |-
+     {{- range tuple "low" "medium" "high" }}
+     - {{ . }}
+     {{- end }}
+  
+  
+ helm install --dry-run --debug controlif ./mychart
+ 
+ 
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

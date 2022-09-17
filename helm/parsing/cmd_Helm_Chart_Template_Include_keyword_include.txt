@@ -1,0 +1,36 @@
+ {{- define "mychart.version" -}}
+ app_name: {{ .Chart.Name }}
+ app_version: "{{ .Chart.Version }}"
+ {{- end -}}
+ 
+ #error
+ 
+   labels:
+     {{- template "mychart.version" $ }}
+ 
+ 
+ helm install --dry-run --debug templatedemo ./mychart
+ 
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ metadata:
+   name: {{ .Release.Name}}-configmap
+   labels:
+ {{ include "mychart.version" . | indent 4 }}
+ data:
+   myvalue: "Sample Config Map"
+   costCode: {{ .Values.costCode }}
+   Zone: {{ quote .Values.infra.zone }}
+   Region: {{ quote .Values.infra.region }}
+   ProjectCode: {{ upper .Values.projectCode }}
+   pipeline: {{ .Values.projectCode | upper | quote }}
+   now: {{ now | date "2006-01-02"| quote }}
+   contact: {{ .Values.contact | default "1-800-123-0000" | quote }}
+   {{- range $key, $value := .Values.tags }}
+   {{ $key }}: {{ $value | quote }}
+   {{- end }}
+{{include "mychart.version" $ | indent 2 }}
+
+
+ helm install --dry-run --debug templatedemo ./mychart
+ 

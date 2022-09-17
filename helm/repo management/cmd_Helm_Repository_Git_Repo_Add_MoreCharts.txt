@@ -1,0 +1,30 @@
+ helm repo add --username muthu4all@gmail.com --password <<acccess token>> my-github-helm-repo 'https://raw.githubusercontent.com/muthu4all/helm_git_repo/master'
+ 
+ helm search repo my-github-helm-repo
+ 
+ helm repo update
+ 
+helm search repo -l mychartmuseumrepo
+
+helm create gitrepotest2
+
+cd gitrepotest2
+
+
+cd helm_git_repo
+helm package /root/helm_demo/gitrepotest
+
+helm repo index .
+
+git add .
+
+git commit -m "my-repo"
+
+git push -u origin master
+
+
+ helm repo update
+ 
+helm search repo -l mychartmuseumrepo
+
+

@@ -1,0 +1,36 @@
+ mkdir helm_git_repo
+ 
+ cd helm_git_repo
+ 
+ echo "# helm_repo" >> README.md
+ git init
+ git add README.md
+ git commit -m "first commit"
+ git config --global user.email "muthu4all@gmail.com"
+ git config --global user.name "Muthukumar"
+ git commit -m "first commit"
+ git remote add origin https://github.com/<<useraccount>>/helm_git_repo.git
+ git push -u origin master
+ 
+ 
+ git remote add origin https://github.com/<<useraccount>>/helm_git_repo.git
+git push -u origin master
+
+cd ..
+
+helm create gitrepotest
+
+pwd
+
+cd helm_git_repo
+helm package /root/helm_demo/gitrepotest
+
+helm repo index .
+
+git add .
+
+git commit -m "my-repo"
+
+git push -u origin master
+
+https://raw.githubusercontent.com/<<useraccount>>/helm_git_repo/master

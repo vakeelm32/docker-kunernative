@@ -1,0 +1,17 @@
+
+ 
+ {{- define "mychart.systemlables" }}
+   labels:
+     drive: ssd
+     machine: frontdrive
+     rack: 4c
+     vcard: 8g
+ {{- end }}
+ 
+ 
+ {{- template "mychart.systemlables" }}
+ 
+ helm install --dry-run --debug templatedemo ./mychart
+ 
+ 
+ 

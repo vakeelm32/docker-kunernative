@@ -1,0 +1,23 @@
+ built-in objects
+ 
+https://helm.sh/docs/chart_template_guide/builtin_objects/
+
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  myvalue: "Sample Config Map"
+
+
+helm install releasename-test ./mychart
+
+  
+helm get manifest releasename-test
+
+helm install --debug --dry-run dryrun-test ./mychart
+
+kubectl describe configmaps releasename-test-configmap
+
+helm uninstall releasename-test

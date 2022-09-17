@@ -1,0 +1,75 @@
+preinstalljob-hook-job.yaml
+
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: preinstalljob-hook-job
+  annotations:
+    "helm.sh/hook": "pre-install"
+
+spec:
+  template:
+    spec:      
+      containers:
+      - name: pre-install
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        
+        command: ['sh', '-c', 'echo pre-install Job Pod is Running ; sleep 3']
+    
+      restartPolicy: OnFailure
+      terminationGracePeriodSeconds: 0
+      
+  backoffLimit: 3
+  completions: 1
+  parallelism: 1
+  
+  
+postinstalljob-hook-job.yaml  
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: postinstalljob-hook-job
+  annotations:
+    "helm.sh/hook": "post-install"
+spec:
+  template:
+    spec:      
+      containers:
+      - name: post-install
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        
+        command: ['sh', '-c', 'echo post-install Pod is Running ; sleep 6']
+    
+      restartPolicy: OnFailure
+      terminationGracePeriodSeconds: 0
+      
+  backoffLimit: 3
+  completions: 1
+  parallelism: 1  
+  
+  
+  
+  
+helm install hooktestjobinstall ./hooktest
+
+
+
+kubectl describe pod/preinstalljob-hook-job-m9zlx | grep -E 'Anno|Started:|Finished:'
+
+kubectl describe pod/hooktestjobinstall-5d45b488dc-fjzhk | grep -E 'Anno|Started:|Finished:'
+
+kubectl describe pod/postinstalljob-hook-job-pld5b | grep -E 'Anno|Started:|Finished:'
+
+
+
+
+
+helm delete hooktestjobinstall
+
+kubectl get jobs  
+kubectl delete job/preinstalljob-hook-job
+kubectl delete job/postinstalljob-hook-job

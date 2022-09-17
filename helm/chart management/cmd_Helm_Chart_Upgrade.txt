@@ -1,0 +1,43 @@
+helm create upgrade-rlbk
+
+helm repo add mychartmuseumrepo http://192.168.0.52:8080
+
+helm repo list
+helm search repo mychartmuseumrepo
+
+
+helm push upgrade-rlbk/ mychartmuseumrepo
+
+helm repo update 
+
+helm search repo mychartmuseumrepo
+
+helm search repo -l mychartmuseumrepo
+
+kubectl get all
+
+helm install install-upgrade-rlbk-demo mychartmuseumrepo/upgrade-rlbk
+
+helm list
+
+kubectl get all
+
+helm list
+
+vi Charts.yaml
+vi values.yaml
+
+helm push upgrade-rlbk/ mychartmuseumrepo
+helm repo update 
+
+helm search repo mychartmuseumrepo
+
+helm search repo -l mychartmuseumrepo
+
+
+helm list
+helm upgrade install-upgrade-rlbk-demo mychartmuseumrepo/upgrade-rlbk
+
+kubectl get all
+
+helm history install-upgrade-rlbk-demo

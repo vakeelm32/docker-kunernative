@@ -1,0 +1,15 @@
+ kubectl get all
+ 
+ helm history install-upgrade-rlbk-demo
+ 
+ 
+ helm rollback install-upgrade-rlbk-demo 2
+ 
+ helm history install-upgrade-rlbk-demo
+ 
+ kubectl get all
+ 
+ helm uninstall install-upgrade-rlbk-demo
+ 
+ helm list
+kubectl get all

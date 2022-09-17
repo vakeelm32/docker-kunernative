@@ -1,0 +1,67 @@
+ helm create hooktest
+ 
+ ./hooktest/templates
+ 
+ preinstall-hook.yaml
+ 
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: preinstall-hook
+   annotations:
+     "helm.sh/hook": "pre-install"
+ spec:
+   containers:
+   - name: hook1-container
+     image: busybox
+     imagePullPolicy: IfNotPresent
+     command: ['sh', '-c', 'echo The pre-install hook Pod is running  - preinstall-hook && sleep 10']
+   restartPolicy: Never
+   terminationGracePeriodSeconds: 0
+   
+   
+ postinstall-hook.yaml  
+   
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: postinstall-hook
+   annotations:
+     "helm.sh/hook": "post-install"
+ spec:
+   containers:
+   - name: hook2-container
+     image: busybox
+     imagePullPolicy: IfNotPresent
+     command: ['sh', '-c', 'echo post-install hook Pod is running - post-install&& sleep 5']
+   restartPolicy: Never
+   terminationGracePeriodSeconds: 0  
+   
+   
+ helm install hooktestinstall ./hooktest  
+ 
+ 
+ helm status hooktestinstall
+ 
+ 
+ 
+ kubectl get pods
+ 
+ 
+ kubectl describe pod/preinstall-hook 
+ 
+ 
+ 
+ kubectl describe pod/preinstall-hook | grep -E 'Anno|Started:|Finished:'
+ 
+ kubectl describe pod/hooktestinstall-86b894bc76-4jn7c | grep -E 'Anno|Started:|Finished:'
+ 
+ kubectl describe pod/postinstall-hook | grep -E 'Anno|Started:|Finished:'
+ 
+ 
+ 
+ 
+ 
+ helm delete hooktestinstall
+ kubectl delete pod/preinstall-hook 
+kubectl delete pod/postinstall-hook

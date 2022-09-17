@@ -1,0 +1,12 @@
+ helm package repotest/
+ 
+ curl --data-binary "@repotest-0.1.1.tgz" http://192.168.0.52:8080/api/charts
+ helm search repo mychartmuseumrepo
+ 
+ helm repo update
+ 
+ helm search repo mychartmuseumrepo
+ 
+ helm search repo -l mychartmuseumrepo
+ 
+ 

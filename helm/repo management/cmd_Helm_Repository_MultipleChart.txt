@@ -1,0 +1,13 @@
+ helm create repotest2
+ 
+ helm package repotest2/
+ 
+ cp repotest2-0.1.0.tgz <chart museum storage>/
+ 
+ 
+ helm repo update
+ 
+ helm search repo mychartmuseumrepo
+ 
+ 
+helm search repo -l mychartmuseumrepo

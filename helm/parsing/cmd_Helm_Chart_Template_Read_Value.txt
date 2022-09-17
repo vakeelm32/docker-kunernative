@@ -1,0 +1,17 @@
+ mychart/values.yaml
+ 
+ 
+ costCode: CC98112
+ 
+ 
+ costCode: {{ .Values.costCode }}
+ 
+ helm install --debug --dry-run firstdryrun ./mychart
+ 
+ 
+ helm install firstvalue ./mychart
+ 
+ 
+ helm get manifest firstvalue
+ 
+kubectl describe configmaps firstvalue-configmap

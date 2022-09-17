@@ -1,0 +1,54 @@
+ helm create dependencytest
+ 
+ helm install mydeptestinstall --dry-run --debug ./dependencytest
+ 
+ helm install mydeptestinstall ./dependencytest --set service.type=NodePort
+ 
+ helm list
+ 
+ helm status mydeptestinstall
+ 
+kubectl get all
+
+
+values.yaml
+
+
+image:
+repository: muthu4all/todo
+tag: 1.0.0
+pullPolicy: IfNotPresent
+
+
+helm lint ./dependencytest
+
+helm list
+helm uninstall mydeptestinstall
+
+
+helm install mydeptestinstalltodo ./dependencytest --set service.type=NodePort
+
+helm list
+
+kubectl get all
+
+requirements.yaml
+
+dependencies:
+  - name: mariadb
+    version: 7.x.x
+    repository: https://kubernetes-charts.storage.googleapis.com/
+
+
+helm dependency build ./dependencytest
+
+
+helm dependency update ./dependencytest
+
+helm uninstall mydeptestinstalltodo
+
+helm install mydepwithmaria ./dependencytest --set service.type=NodePort
+
+kubectl get all
+
+kubectl describe pod <<>>
