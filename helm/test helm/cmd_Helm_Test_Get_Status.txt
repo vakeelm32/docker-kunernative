@@ -1,0 +1,17 @@
+
+ helm list
+ 
+ helm get notes install-upgrade-rlbk-demo
+ 
+ helm get values install-upgrade-rlbk-demo
+ 
+ helm get manifest install-upgrade-rlbk-demo
+ 
+ helm get hooks install-upgrade-rlbk-demo
+ 
+ 
+ helm get all install-upgrade-rlbk-demo
+ 
+ 
+ 
+helm status install-upgrade-rlbk-demo
